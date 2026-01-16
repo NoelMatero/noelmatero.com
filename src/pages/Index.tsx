@@ -134,7 +134,7 @@ const Index = () => {
           <div className="max-w-6xl mx-auto px-6">
             <div className="py-12 md:py-16">
               <h2 className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-6 text-center">
-                Projects
+                LATELY
               </h2>
               
               {/* Asymmetric Grid */}
@@ -190,7 +190,7 @@ const Index = () => {
               </div>
 
               {/* Extra Projects - newly added */}
-              <div className="grid md:grid-cols-3 gap-px bg-[hsl(var(--grid-line-subtle))] mt-px">
+              <div className="grid md:grid-cols-2 gap-px bg-[hsl(var(--grid-line-subtle))] mt-px">
                 <div className="bg-background">
                   <ProjectCard
                     title="Orangutan"
@@ -202,18 +202,9 @@ const Index = () => {
 
                 <div className="bg-background">
                   <ProjectCard
-                    title="DIY Smartwatch"
-                    description="Custom DIY smartwatch PCB built to explore electronics, PCB design, and embedded systems using EasyEDA."
-                    tags={["Hardware", "PCB", "Embedded"]}
-                    href="#"
-                  />
-                </div>
-
-                <div className="bg-background">
-                  <ProjectCard
-                    title="FIRST Global — Robotics Control"
-                    description="Control software for Team Finland’s robot: full PID control system and soft-start mechanism for reliable operation."
-                    tags={["C++", "Robotics", "Control"]}
+                    title="Developer Tool"
+                    description="Built a CLI tool that automates repetitive development tasks. Used by the team daily, saving hours of manual work. Features include automated testing, deployment scripts, and code generation."
+                    tags={["Python", "CLI", "DevOps"]}
                     href="#"
                   />
                 </div>
