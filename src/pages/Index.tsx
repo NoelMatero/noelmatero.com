@@ -39,7 +39,7 @@ const Index = () => {
                 <h1 className="mt-8 text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1] fade-in-up fade-in-delay-2">
                   <span className="whitespace-nowrap">Go Hard</span>
                   <br />
-                  <span className="text-muted-foreground">that matter.</span>
+                  <span className="text-muted-foreground">Or Go Home.</span>
                 </h1>
                 
                 <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-md leading-relaxed fade-in-up fade-in-delay-3">
@@ -77,7 +77,7 @@ const Index = () => {
               <StatCard value="3+" label="Years Coding" />
               <StatCard value="10+" label="Projects Shipped" />
               <StatCard value="∞" label="Cups of Coffee" />
-              <StatCard value="1" label="Startup" />
+              <StatCard value="Soon?" label="Startup" />
             </div>
           </div>
         </section>
@@ -171,18 +171,49 @@ const Index = () => {
               {/* Second Row - Different Pattern */}
               <div className="grid md:grid-cols-2 gap-px bg-[hsl(var(--grid-line-subtle))] mt-px">
                 <div className="bg-background">
-                  <ProjectCard 
-                    title="Real-time Dashboard"
-                    description="Live analytics dashboard processing thousands of events per second. Built with WebSockets and optimized for performance."
-                    tags={["Next.js", "WebSocket", "D3"]}
+                  <ProjectCard
+                    title="Finalist — Datatähti"
+                    description="Finalist in Datatähti, Finland’s national informatics competition and qualifier for the Baltic Olympiad in Informatics (BOI). MAOL ry."
+                    tags={["Competition", "Algorithms"]}
                     href="#"
                   />
                 </div>
+
                 <div className="bg-background">
-                  <ProjectCard 
-                    title="Mobile App"
-                    description="Cross-platform mobile application with 10k+ downloads. Focus on performance and user experience."
-                    tags={["React Native", "TypeScript"]}
+                  <ProjectCard
+                    title="HIIT Open 2024 — Programming Contest"
+                    description="HIIT Open 2024 — 15th place. Helsinki Institute for Information Technology (HIIT)."
+                    tags={["Contest", "Algorithms"]}
+                    href="#"
+                  />
+                </div>
+              </div>
+
+              {/* Extra Projects - newly added */}
+              <div className="grid md:grid-cols-3 gap-px bg-[hsl(var(--grid-line-subtle))] mt-px">
+                <div className="bg-background">
+                  <ProjectCard
+                    title="Orangutan"
+                    description="A lightweight Rust web server framework inspired by Flask. Minimal API, great ergonomics — 5000+ downloads on crates.io."
+                    tags={["Rust", "Web", "Crate"]}
+                    href="#"
+                  />
+                </div>
+
+                <div className="bg-background">
+                  <ProjectCard
+                    title="DIY Smartwatch"
+                    description="Custom DIY smartwatch PCB built to explore electronics, PCB design, and embedded systems using EasyEDA."
+                    tags={["Hardware", "PCB", "Embedded"]}
+                    href="#"
+                  />
+                </div>
+
+                <div className="bg-background">
+                  <ProjectCard
+                    title="FIRST Global — Robotics Control"
+                    description="Control software for Team Finland’s robot: full PID control system and soft-start mechanism for reliable operation."
+                    tags={["C++", "Robotics", "Control"]}
                     href="#"
                   />
                 </div>
