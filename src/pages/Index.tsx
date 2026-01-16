@@ -120,9 +120,9 @@ const Index = () => {
               
               <ProjectCard 
                 featured
-                title="[Project Name] — The thing I'm most proud of"
-                description="A comprehensive description of your most impressive project. What problem does it solve? What technologies did you use? What was the impact? This is your chance to show off your best work and demonstrate your technical abilities."
-                tags={["React", "TypeScript", "Node.js"]}
+                title="[Something Secret]"
+                description="Hint: What if we could combine local resources with cloud resources?"
+                tags={["Rust", "Systems", "Proxy", "Tunnel"]}
                 href="#"
               />
             </div>
@@ -142,9 +142,11 @@ const Index = () => {
                 {/* Large card spanning 2 columns */}
                 <div className="bg-background md:col-span-2 md:row-span-2">
                   <ProjectCard 
-                    title="Developer Tool"
-                    description="Built a CLI tool that automates repetitive development tasks. Used by the team daily, saving hours of manual work. Features include automated testing, deployment scripts, and code generation."
-                    tags={["Python", "CLI", "DevOps"]}
+                    title="Orangutan"
+                    description="Orangutan
+
+A lightweight Rust web server framework inspired by Flask. Minimal API, great ergonomics — 5000+ downloads on crates.io."
+                    tags={["Rust", "Async", "Web", "Server", "HTTP", "Concurrency"]}
                     href="#"
                   />
                 </div>
@@ -152,17 +154,17 @@ const Index = () => {
                 {/* Small cards */}
                 <div className="bg-background">
                   <ProjectCard 
-                    title="API Gateway"
-                    description="High-performance gateway handling millions of requests."
-                    tags={["Go", "Redis"]}
+                    title="FIRST Global — Robotics Control"
+                    description="Control software for Team Finland’s robot: full PID control system and soft-start mechanism for reliable operation."
+                    tags={["Java", "Robotics", "Control", "PID"]}
                     href="#"
                   />
                 </div>
                 <div className="bg-background">
                   <ProjectCard 
-                    title="Design System"
-                    description="Component library used across multiple products."
-                    tags={["React", "Figma"]}
+                    title="DIY Smartwatch"
+                    description="Custom DIY smartwatch PCB built to explore electronics, PCB design, and embedded systems using EasyEDA."
+                    tags={["Hardware", "PCB", "Embedded"]}
                     href="#"
                   />
                 </div>
@@ -184,27 +186,6 @@ const Index = () => {
                     title="HIIT Open 2024 — Programming Contest"
                     description="HIIT Open 2024 — 15th place. Helsinki Institute for Information Technology (HIIT)."
                     tags={["Contest", "Algorithms"]}
-                    href="#"
-                  />
-                </div>
-              </div>
-
-              {/* Extra Projects - newly added */}
-              <div className="grid md:grid-cols-2 gap-px bg-[hsl(var(--grid-line-subtle))] mt-px">
-                <div className="bg-background">
-                  <ProjectCard
-                    title="Orangutan"
-                    description="A lightweight Rust web server framework inspired by Flask. Minimal API, great ergonomics — 5000+ downloads on crates.io."
-                    tags={["Rust", "Web", "Crate"]}
-                    href="#"
-                  />
-                </div>
-
-                <div className="bg-background">
-                  <ProjectCard
-                    title="Developer Tool"
-                    description="Built a CLI tool that automates repetitive development tasks. Used by the team daily, saving hours of manual work. Features include automated testing, deployment scripts, and code generation."
-                    tags={["Python", "CLI", "DevOps"]}
                     href="#"
                   />
                 </div>
