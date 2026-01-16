@@ -39,7 +39,7 @@ const Index = () => {
                 <h1 className="mt-8 text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1] fade-in-up fade-in-delay-2">
                   <span className="whitespace-nowrap">Go Hard</span>
                   <br />
-                  <span className="text-muted-foreground">that matter.</span>
+                  <span className="text-muted-foreground">Or Go Home.</span>
                 </h1>
                 
                 <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-md leading-relaxed fade-in-up fade-in-delay-3">
@@ -77,7 +77,7 @@ const Index = () => {
               <StatCard value="3+" label="Years Coding" />
               <StatCard value="10+" label="Projects Shipped" />
               <StatCard value="∞" label="Cups of Coffee" />
-              <StatCard value="1" label="Startup" />
+              <StatCard value="Soon?" label="Startup" />
             </div>
           </div>
         </section>
@@ -120,9 +120,9 @@ const Index = () => {
               
               <ProjectCard 
                 featured
-                title="[Project Name] — The thing I'm most proud of"
-                description="A comprehensive description of your most impressive project. What problem does it solve? What technologies did you use? What was the impact? This is your chance to show off your best work and demonstrate your technical abilities."
-                tags={["React", "TypeScript", "Node.js"]}
+                title="[Something Secret]"
+                description="Hint: What if we could combine local resources with cloud resources?"
+                tags={["Rust", "Systems", "Proxy", "Tunnel"]}
                 href="#"
               />
             </div>
@@ -134,7 +134,7 @@ const Index = () => {
           <div className="max-w-6xl mx-auto px-6">
             <div className="py-12 md:py-16">
               <h2 className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-6 text-center">
-                Projects
+                LATELY
               </h2>
               
               {/* Asymmetric Grid */}
@@ -142,9 +142,11 @@ const Index = () => {
                 {/* Large card spanning 2 columns */}
                 <div className="bg-background md:col-span-2 md:row-span-2">
                   <ProjectCard 
-                    title="Developer Tool"
-                    description="Built a CLI tool that automates repetitive development tasks. Used by the team daily, saving hours of manual work. Features include automated testing, deployment scripts, and code generation."
-                    tags={["Python", "CLI", "DevOps"]}
+                    title="Orangutan"
+                    description="Orangutan
+
+A lightweight Rust web server framework inspired by Flask. Minimal API, great ergonomics — 5000+ downloads on crates.io."
+                    tags={["Rust", "Async", "Web", "Server", "HTTP", "Concurrency"]}
                     href="#"
                   />
                 </div>
@@ -152,17 +154,17 @@ const Index = () => {
                 {/* Small cards */}
                 <div className="bg-background">
                   <ProjectCard 
-                    title="API Gateway"
-                    description="High-performance gateway handling millions of requests."
-                    tags={["Go", "Redis"]}
+                    title="FIRST Global — Robotics Control"
+                    description="Control software for Team Finland’s robot: full PID control system and soft-start mechanism for reliable operation."
+                    tags={["Java", "Robotics", "Control", "PID"]}
                     href="#"
                   />
                 </div>
                 <div className="bg-background">
                   <ProjectCard 
-                    title="Design System"
-                    description="Component library used across multiple products."
-                    tags={["React", "Figma"]}
+                    title="DIY Smartwatch"
+                    description="Custom DIY smartwatch PCB built to explore electronics, PCB design, and embedded systems using EasyEDA."
+                    tags={["Hardware", "PCB", "Embedded"]}
                     href="#"
                   />
                 </div>
@@ -171,18 +173,19 @@ const Index = () => {
               {/* Second Row - Different Pattern */}
               <div className="grid md:grid-cols-2 gap-px bg-[hsl(var(--grid-line-subtle))] mt-px">
                 <div className="bg-background">
-                  <ProjectCard 
-                    title="Real-time Dashboard"
-                    description="Live analytics dashboard processing thousands of events per second. Built with WebSockets and optimized for performance."
-                    tags={["Next.js", "WebSocket", "D3"]}
+                  <ProjectCard
+                    title="Finalist — Datatähti"
+                    description="Finalist in Datatähti, Finland’s national informatics competition and qualifier for the Baltic Olympiad in Informatics (BOI). MAOL ry."
+                    tags={["Competition", "Algorithms"]}
                     href="#"
                   />
                 </div>
+
                 <div className="bg-background">
-                  <ProjectCard 
-                    title="Mobile App"
-                    description="Cross-platform mobile application with 10k+ downloads. Focus on performance and user experience."
-                    tags={["React Native", "TypeScript"]}
+                  <ProjectCard
+                    title="HIIT Open 2024 — Programming Contest"
+                    description="HIIT Open 2024 — 15th place. Helsinki Institute for Information Technology (HIIT)."
+                    tags={["Contest", "Algorithms"]}
                     href="#"
                   />
                 </div>
