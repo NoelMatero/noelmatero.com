@@ -208,18 +208,9 @@ A lightweight Rust web server framework inspired by Flask. Minimal API, great er
                 {/* Right - Content */}
                 <div className="md:col-span-2 md:pl-12">
                   <div className="space-y-6 max-w-xl">
-                    <p className="text-xl md:text-2xl font-medium leading-relaxed text-foreground">
-                      I believe in building things that solve real problems for real people.
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Code is a means to an end. The goal isn't to write clever code—it's to create 
-                      something valuable. I focus on shipping fast, iterating based on feedback, 
-                      and never over-engineering.
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Being young in tech means having the energy to move fast and the humility to 
-                      learn constantly. I treat every project as an opportunity to level up.
-                    </p>
+                    <p className="text-xl md:text-1xl font-medium leading-relaxed text-foreground">
+                      Build Something That Matters
+                    </p>                    
                   </div>
                 </div>
               </div>
@@ -261,8 +252,8 @@ A lightweight Rust web server framework inspired by Flask. Minimal API, great er
         </section>
 
         {/* Footer — allow GridBackground vertical lines to show through */}
-        <footer className="max-w-6xl mx-auto px-6 py-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <footer className="max-w-6xl mx-auto px-6 py-7">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <p className="font-mono text-xs text-muted-foreground">
               © {new Date().getFullYear()}
             </p>
