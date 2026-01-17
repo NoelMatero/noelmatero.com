@@ -29,7 +29,7 @@ const Index = () => {
         {/* Hero Section */}
         <section>
           <div className="max-w-6xl mx-auto px-6">
-            <div className="grid md:grid-cols-2 min-h-[70vh]">
+            <div className="grid md:grid-cols-2 min-h-[50vh]">
               {/* Left column - Content (moved slightly inward with symmetric padding) */}
               <div className="flex flex-col justify-center py-16 md:py-24 px-6 md:px-12 md:pr-12">
                 <div className="fade-in-up fade-in-delay-1">
@@ -70,17 +70,18 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Stats Section - Full width grid aligned */}
+        {/* Stats Section - Full width grid aligned 
         <section>
           <div className="max-w-6xl mx-auto px-6">
             <div className="border-t border-b border-[hsl(var(--grid-line-subtle))] grid grid-cols-2 md:grid-cols-4">
-              <StatCard value="3+" label="Years Coding" />
-              <StatCard value="10+" label="Projects Shipped" />
-              <StatCard value="∞" label="Cups of Coffee" />
+              <StatCard value="" label="Bugs fixed at 3am" />
+              <StatCard value="Couple" label="APIs redesigned" />
+              <StatCard value="Not enough" label="Things I wish existed — now do" />
               <StatCard value="Soon?" label="Startup" />
             </div>
           </div>
-        </section>
+        </section>      
+        */}        
 
         {/* Currently Section - Centered */}
         <section id="work">
@@ -181,8 +182,8 @@ A lightweight Rust web server framework inspired by Flask. Minimal API, great er
 
                 <div className="bg-background">
                   <ProjectCard
-                    title="HIIT Open 2024 — Programming Contest"
-                    description="HIIT Open 2024 — 15th place. Helsinki Institute for Information Technology (HIIT)."
+                    title="HIIT Open - Programming Contest"
+                    description="HIIT Open | Helsinki Institute for Information Technology (HIIT)."
                     tags={["Contest", "Algorithms"]}
                   />
                 </div>
@@ -197,21 +198,16 @@ A lightweight Rust web server framework inspired by Flask. Minimal API, great er
             {/* mask background grid behind this section so vertical lines don't intrude */}
             <div className="relative">
               <div className="absolute inset-0 bg-background z-0" />
-              <div className="relative z-10 grid md:grid-cols-3 py-12 md:py-16 border-b border-[hsl(var(--grid-line-subtle))]">
-                {/* Left - Label */}
-                <div className="md:pr-8">
-                  <h2 className="font-mono text-xs text-muted-foreground uppercase tracking-widest sticky top-8">
-                    Philosophy
-                  </h2>
-                </div>
-                
-                {/* Right - Content */}
-                <div className="md:col-span-2 md:pl-12">
-                  <div className="space-y-6 max-w-xl">
-                    <p className="text-xl md:text-1xl font-medium leading-relaxed text-foreground">
-                      Build Something That Matters
-                    </p>                    
-                  </div>
+              <div className="relative z-10 flex flex-col items-center text-center py-20 md:py-28 border-b border-[hsl(var(--grid-line-subtle))]">
+                <h2 className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-6">
+                  Philosophy
+                </h2>
+
+                <div className="space-y-8 max-w-2xl">
+                  <p className="text-2xl md:text-3xl font-medium leading-relaxed text-foreground">
+                    Build Something That Matters
+                  </p>
+                  <div className="h-4 md:h-6" />
                 </div>
               </div>
             </div>
