@@ -48,13 +48,13 @@ const Index = () => {
 
                 <div className="mt-8 flex items-center gap-4 fade-in-up fade-in-delay-4">
                   <a 
-                    href="mailto:hello@example.com"
+                    href="mailto:noel@noelmatero.com"
                     className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background font-medium text-sm hover:bg-foreground/80 transition-colors"
                   >
                     Get in touch
                   </a>
                   <a 
-                    href="#work"
+                    href="#https://github.com/NoelMatero/"
                     className="inline-flex items-center gap-2 px-5 py-2.5 border border-[hsl(var(--grid-line))] text-sm hover:border-[hsl(0,0%,30%)] transition-colors bg-background relative z-20"
                   >
                     View work
@@ -122,8 +122,7 @@ const Index = () => {
                 featured
                 title="[Something Secret]"
                 description="Hint: What if we could combine local resources with cloud resources?"
-                tags={["Rust", "Systems", "Proxy", "Tunnel"]}
-                href="#"
+                tags={["Rust", "Systems", "Proxy", "Tunnel"]}                
               />
             </div>
           </div>
@@ -147,7 +146,7 @@ const Index = () => {
 
 A lightweight Rust web server framework inspired by Flask. Minimal API, great ergonomics — 5000+ downloads on crates.io."
                     tags={["Rust", "Async", "Web", "Server", "HTTP", "Concurrency"]}
-                    href="#"
+                    href="https://github.com/NoelMatero/orangutan"
                   />
                 </div>
                 
@@ -157,7 +156,7 @@ A lightweight Rust web server framework inspired by Flask. Minimal API, great er
                     title="FIRST Global — Robotics Control"
                     description="Control software for Team Finland’s robot: full PID control system and soft-start mechanism for reliable operation."
                     tags={["Java", "Robotics", "Control", "PID"]}
-                    href="#"
+                    href="https://github.com/NoelMatero/FGC-2025-FINLAND"
                   />
                 </div>
                 <div className="bg-background">
@@ -165,7 +164,7 @@ A lightweight Rust web server framework inspired by Flask. Minimal API, great er
                     title="DIY Smartwatch"
                     description="Custom DIY smartwatch PCB built to explore electronics, PCB design, and embedded systems using EasyEDA."
                     tags={["Hardware", "PCB", "Embedded"]}
-                    href="#"
+                    href="https://github.com/NoelMatero/DemoSmartWatch"
                   />
                 </div>
               </div>
@@ -177,7 +176,6 @@ A lightweight Rust web server framework inspired by Flask. Minimal API, great er
                     title="Finalist — Datatähti"
                     description="Finalist in Datatähti, Finland’s national informatics competition and qualifier for the Baltic Olympiad in Informatics (BOI). MAOL ry."
                     tags={["Competition", "Algorithms"]}
-                    href="#"
                   />
                 </div>
 
@@ -186,7 +184,6 @@ A lightweight Rust web server framework inspired by Flask. Minimal API, great er
                     title="HIIT Open 2024 — Programming Contest"
                     description="HIIT Open 2024 — 15th place. Helsinki Institute for Information Technology (HIIT)."
                     tags={["Contest", "Algorithms"]}
-                    href="#"
                   />
                 </div>
               </div>
@@ -257,51 +254,7 @@ A lightweight Rust web server framework inspired by Flask. Minimal API, great er
               </div>
 
               <div className="grid md:grid-cols-2 items-stretch border-b border-[hsl(var(--grid-line-subtle))]">
-                {/* left column: heading shifted 1px left */}
-                <div className="h-full border-r border-[hsl(var(--grid-line-subtle))]">
-                  <div
-                    className="h-full flex flex-col justify-center px-6 md:px-12 py-12 md:py-16"
-                    style={{ transform: "translateX(-1px)" }}
-                  >
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-tight">
-                      Let's build
-                      <br />
-                      <span className="text-muted-foreground">something together.</span>
-                    </h2>
-                  </div>
-                </div>
-
-                {/* right column: split into two boxes (left = paragraph, right = contact actions) */}
-                <div className="h-full">
-                  <div className="h-full grid md:grid-cols-2 gap-4">
-                    {/* right-left box: paragraph, aligned to left of the grid */}
-                    <div className="bg-background h-full flex items-center px-6 md:px-12 py-12 md:py-16">
-                      <p className="text-muted-foreground mb-0 max-w-sm">
-                        Always open to interesting projects, collaborations, or just a chat about tech.
-                      </p>
-                    </div>
-
-                    {/* right-right box: contact actions, aligned to right of the grid */}
-                    <div className="bg-background h-full flex items-center justify-end px-6 md:px-12 py-12 md:py-16">
-                      <div className="flex flex-col sm:flex-row gap-3">
-                        <a
-                          href="mailto:hello@example.com"
-                          className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-foreground text-background font-medium text-sm hover:bg-foreground/80 transition-colors"
-                        >
-                          hello@example.com
-                        </a>
-                        <a
-                          href="https://twitter.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[hsl(var(--grid-line))] text-sm hover:border-[hsl(0,0%,30%)] transition-colors"
-                        >
-                          DM on Twitter
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {/* left column: heading shifted 1px left */}                                                         
               </div>
             </div>
           </div>
@@ -311,13 +264,13 @@ A lightweight Rust web server framework inspired by Flask. Minimal API, great er
         <footer className="max-w-6xl mx-auto px-6 py-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="font-mono text-xs text-muted-foreground">
-              © {new Date().getFullYear()} — Built with obsession
+              © {new Date().getFullYear()}
             </p>
             <div className="flex items-center gap-6">
               <a href="https://github.com/NoelMatero/" className="font-mono text-xs text-muted-foreground hover:text-foreground/70 transition-colors">
                 GitHub
               </a>
-              <a href="#" className="font-mono text-xs text-muted-foreground hover:text-foreground/70 transition-colors">
+              <a href="https://www.linkedin.com/in/matero-noel-70b414390" className="font-mono text-xs text-muted-foreground hover:text-foreground/70 transition-colors">
                 LinkedIn
               </a>
             </div>
