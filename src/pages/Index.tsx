@@ -37,13 +37,13 @@ const Index = () => {
                 </div>
                 
                 <h1 className="mt-8 text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1] fade-in-up fade-in-delay-2">
-                  <span className="whitespace-nowrap">Go Hard</span>
+                  <span className="whitespace-nowrap">***Noel</span>
                   <br />
-                  <span className="text-muted-foreground">Or Go Home.</span>
+                  <span className="text-muted-foreground">*****Matero</span>
                 </h1>
                 
                 <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-md leading-relaxed fade-in-up fade-in-delay-3">
-                  | 18 | engineer & student | Obsessed |
+                  | 18 | engineer & student | builder | 
                 </p>
 
                 <div className="mt-8 flex items-center gap-4 fade-in-up fade-in-delay-4">
@@ -54,7 +54,7 @@ const Index = () => {
                     Get in touch
                   </a>
                   <a 
-                    href="#https://github.com/NoelMatero/"
+                    href="https://github.com/NoelMatero/"
                     className="inline-flex items-center gap-2 px-5 py-2.5 border border-[hsl(var(--grid-line))] text-sm hover:border-[hsl(0,0%,30%)] transition-colors bg-background relative z-20"
                   >
                     View work
