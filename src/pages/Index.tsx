@@ -145,7 +145,7 @@ const Index = () => {
                     title="Orangutan"
                     description="Orangutan
 
-A lightweight Rust web server framework inspired by Flask. Minimal API, great ergonomics — 5000+ downloads on crates.io."
+A lightweight Rust web server framework inspired by Flask. Minimal API, great ergonomics — 10 000+ downloads on crates.io."
                     tags={["Rust", "Async", "Web", "Server", "HTTP", "Concurrency"]}
                     href="https://github.com/NoelMatero/orangutan"
                   />
