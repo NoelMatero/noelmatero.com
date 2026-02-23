@@ -37,9 +37,9 @@ const Index = () => {
                 </div>
                 
                 <h1 className="mt-8 text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1] fade-in-up fade-in-delay-2">
-                  <span className="whitespace-nowrap">***Noel</span>
+                  <span className="whitespace-nowrap"><span aria-hidden="true">***</span>Noel</span>
                   <br />
-                  <span className="text-muted-foreground">*****Matero</span>
+                  <span className="text-muted-foreground"><span aria-hidden="true">*****</span>Matero</span>
                 </h1>
                 
                 <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-md leading-relaxed fade-in-up fade-in-delay-3">
