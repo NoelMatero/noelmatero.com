@@ -4,7 +4,6 @@ import SocialLinks from "@/components/SocialLinks";
 import Terminal from "@/components/Terminal";
 import GridCard from "@/components/GridCard";
 import ProjectCard from "@/components/ProjectCard";
-import StatCard from "@/components/StatCard";
 
 const Index = () => {
   return (
@@ -42,10 +41,6 @@ const Index = () => {
                   <span className="text-muted-foreground">*****Matero</span>
                 </h1>
                 
-                <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-md leading-relaxed fade-in-up fade-in-delay-3">
-                  | 18 | engineer & student | builder | 
-                </p>
-
                 <div className="mt-8 flex items-center gap-4 fade-in-up fade-in-delay-4">
                   <a 
                     href="mailto:noel@noelmatero.com"
@@ -60,12 +55,7 @@ const Index = () => {
                     View work
                   </a>
                 </div>
-              </div>
-
-              {/* Right column - Terminal (same inward padding) */}
-              <div className="flex items-center justify-center py-16 md:py-24 px-6 md:px-12 md:pl-12 fade-in-up fade-in-delay-5">
-                <Terminal />
-              </div>
+              </div>                
             </div>
           </div>
         </section>
@@ -82,132 +72,35 @@ const Index = () => {
           </div>
         </section>      
         */}        
-
-        {/* Currently Section - Centered */}
-        <section id="work">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="py-12 md:py-16">
-              <h2 className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-6 text-center">
-                Currently
-              </h2>
-              
-              <div className="grid md:grid-cols-2 gap-px bg-[hsl(var(--grid-line-subtle))] items-stretch">
-                <div className="bg-background h-full">
-                  <GridCard 
-                    label="Working"
-                    title="Software Engineer @ [Mundane Co.]"
-                    description="Working with graph databases. Working with rust. Working on cool stuff."
-                  />
-                </div>
-                <div className="bg-background h-full">
-                  <GridCard 
-                    label="Education"
-                    title="High School"
-                    description="Otaniemi high school. Finland, Espoo."
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Project - Full Width */}
-        <section>
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="py-12 md:py-16">
-              <h2 className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-6 text-center">
-                WORKING ON
-              </h2>
-              
-              <ProjectCard 
-                featured
-                title="[Something Secret]"
-                description="Hint: What if we could combine local resources with cloud resources?"
-                tags={["Rust", "Systems", "Proxy", "Tunnel"]}                
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Projects Grid - Asymmetric */}
-        <section>
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="py-12 md:py-16">
-              <h2 className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-6 text-center">
-                LATELY
-              </h2>
-              
-              {/* Asymmetric Grid */}
-              <div className="grid md:grid-cols-3 gap-px bg-[hsl(var(--grid-line-subtle))]">
-                {/* Large card spanning 2 columns */}
-                <div className="bg-background md:col-span-2 md:row-span-2">
-                  <ProjectCard 
-                    title="Orangutan"
-                    description="Orangutan
-
-A lightweight Rust web server framework inspired by Flask. Minimal API, great ergonomics — 5000+ downloads on crates.io."
-                    tags={["Rust", "Async", "Web", "Server", "HTTP", "Concurrency"]}
-                    href="https://github.com/NoelMatero/orangutan"
-                  />
-                </div>
-                
-                {/* Small cards */}
-                <div className="bg-background">
-                  <ProjectCard 
-                    title="FIRST Global — Robotics Control"
-                    description="Control software for Team Finland’s robot: full PID control system and soft-start mechanism for reliable operation."
-                    tags={["Java", "Robotics", "Control", "PID"]}
-                    href="https://github.com/NoelMatero/FGC-2025-FINLAND"
-                  />
-                </div>
-                <div className="bg-background">
-                  <ProjectCard 
-                    title="DIY Smartwatch"
-                    description="Custom DIY smartwatch PCB built to explore electronics, PCB design, and embedded systems using EasyEDA."
-                    tags={["Hardware", "PCB", "Embedded"]}
-                    href="https://github.com/NoelMatero/DemoSmartWatch"
-                  />
-                </div>
-              </div>
-
-              {/* Second Row - Different Pattern */}
-              <div className="grid md:grid-cols-2 gap-px bg-[hsl(var(--grid-line-subtle))] mt-px">
-                <div className="bg-background">
-                  <ProjectCard
-                    title="Finalist — Datatähti"
-                    description="Finalist in Datatähti, Finland’s national informatics competition and qualifier for the Baltic Olympiad in Informatics (BOI). MAOL ry."
-                    tags={["Competition", "Algorithms"]}
-                  />
-                </div>
-
-                <div className="bg-background">
-                  <ProjectCard
-                    title="HIIT Open - Programming Contest"
-                    description="HIIT Open | Helsinki Institute for Information Technology (HIIT)."
-                    tags={["Contest", "Algorithms"]}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Philosophy Section - Text Heavy */}
+       
+        {/* Achievements Section */}
         <section className="border-t border-[hsl(var(--grid-line-subtle))]">
           <div className="max-w-6xl mx-auto px-6">
-            {/* mask background grid behind this section so vertical lines don't intrude */}
             <div className="relative">
               <div className="absolute inset-0 bg-background z-0" />
-              <div className="relative z-10 flex flex-col items-center text-center py-20 md:py-28 border-b border-[hsl(var(--grid-line-subtle))]">
-                <h2 className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-6">
-                  Philosophy
-                </h2>
-
-                <div className="space-y-8 max-w-2xl">
-                  <p className="text-2xl md:text-3xl font-medium leading-relaxed text-foreground">
-                    Build Something That Matters
-                  </p>
-                  <div className="h-4 md:h-6" />
+              <div className="relative z-10 py-16 md:py-24 border-b border-[hsl(var(--grid-line-subtle))]">
+                <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-10">
+                  // background
+                </p>
+                <div className="divide-y divide-[hsl(var(--grid-line-subtle))]">
+                  {[
+                    "An 18-year-old builder.",
+                    "Joined an SF-based AI research startup at 17 while in high school. Worked directly with the founders of a YC-backed graph database startup, helping them with production issues.",
+                    "Built an open-source Rust web server library — 10,000+ users.",
+                    "Built a custom smartwatch from scratch at 15.",
+                    "100% win rate in hackathons.",
+                    "Represented Team Finland in the world's biggest robotics competition.",
+                    "Finalist — Finland's National Informatics Olympiad; HIIT programming contest.",
+                  ].map((item, i) => (
+                    <div key={i} className="flex gap-8 py-5 group">
+                      <span className="font-mono text-xs text-muted-foreground/40 w-6 shrink-0 pt-1 select-none">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <p className={`leading-relaxed transition-colors ${i === 0 ? "text-lg font-medium text-foreground" : "text-muted-foreground group-hover:text-foreground/80"}`}>
+                        {item}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
