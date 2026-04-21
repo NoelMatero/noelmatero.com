@@ -1,55 +1,113 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import { codeToHtml } from "shiki";
+import type { ThemeRegistrationRaw } from "shiki";
+
+const siteTheme: ThemeRegistrationRaw = {
+  name: "site",
+  type: "dark",
+  colors: {
+    "editor.background": "#000000",
+    "editor.foreground": "#ffffffcc",
+  },
+  tokenColors: [
+    {
+      scope: [
+        "comment",
+        "comment.line",
+        "comment.block",
+        "punctuation.definition.comment",
+      ],
+      settings: { foreground: "#ffffff60" },
+    },
+    {
+      scope: [
+        "string",
+        "string.quoted",
+        "string.quoted.double",
+        "string.quoted.single",
+      ],
+      settings: { foreground: "#86efac" }, // pastel green
+    },
+    {
+      scope: ["constant.numeric", "constant.language"],
+      settings: { foreground: "#fed7aa" }, // pastel peach
+    },
+    {
+      scope: [
+        "keyword",
+        "keyword.control",
+        "keyword.operator",
+        "storage.type",
+        "storage.modifier",
+      ],
+      settings: { foreground: "#c4b5fd" }, // pastel purple
+    },
+    {
+      scope: ["entity.name.function", "meta.function-call"],
+      settings: { foreground: "#fde68a" }, // pastel yellow
+    },
+    {
+      scope: [
+        "entity.name.type",
+        "support.type",
+        "support.class",
+        "entity.name.class",
+      ],
+      settings: { foreground: "#f9a8d4" }, // pastel pink
+    },
+    {
+      scope: [
+        "meta.attribute",
+        "entity.name.tag",
+        "punctuation.definition.attribute",
+      ],
+      settings: { foreground: "#a5f3fc" }, // pastel cyan
+    },
+    {
+      scope: ["variable", "variable.other"],
+      settings: { foreground: "#e2e8f0" }, // soft white
+    },
+    {
+      scope: [
+        "punctuation",
+        "meta.brace",
+        "punctuation.brackets",
+        "punctuation.definition.string",
+        "punctuation.section.block",
+        "punctuation.section.group",
+        "punctuation.separator",
+        "punctuation.terminator",
+        "meta.group.braces",
+      ],
+      settings: { foreground: "#ffffff" },
+    },
+  ],
+};
 
 interface CodeBlockProps {
   language?: string;
   code: string;
 }
 
-/** Very small, dependency-free highlighter for demo purposes.
- *  Not a full parser — just lightweight regex-based token coloring for Rust-like snippets.
- */
-const CodeBlock: React.FC<CodeBlockProps> = ({ language = "text", code }) => {
-  const escape = (str: string) =>
-    str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const CodeBlock = ({ language = "text", code }: CodeBlockProps) => {
+  const [html, setHtml] = useState("");
 
-  const highlightRust = (src: string) => {
-    let out = escape(src);
+  useEffect(() => {
+    codeToHtml(code, { lang: language, theme: siteTheme }).then(setHtml);
+  }, [code, language]);
 
-    // comments (// ...)
-    out = out.replace(/(\/\/[^\n\r]*)/g, '<span class="text-muted-foreground">$1</span>');
-
-    // attributes / macros like #[route(...)]
-    out = out.replace(/(#\[[^\]]*\])/g, '<span class="text-pink-400">$1</span>');
-    out = out.replace(/(\w+!)/g, '<span class="text-pink-400">$1</span>');
-
-    // strings
-    out = out.replace(/("([^"\\]|\\.)*")/g, '<span class="text-green-400">$1</span>');
-
-    // numbers
-    out = out.replace(/\b(\d+)\b/g, '<span class="text-orange-400">$1</span>');
-
-    // common rust keywords
-    out = out.replace(
-      /\b(fn|let|mut|struct|enum|impl|trait|use|pub|crate|mod|as|if|else|match|return|loop|while|for|in|break|continue|const|static|where|type|unsafe|extern|move|ref|self|super|dyn|async|await|new)\b/g,
-      '<span class="text-sky-400 font-medium">$1</span>'
+  if (!html)
+    return (
+      <pre className="p-4 text-sm leading-relaxed text-white/30 overflow-auto bg-black">
+        <code>{code}</code>
+      </pre>
     );
 
-    // rudimentary function names (fn name)
-    out = out.replace(/\bfn\s+([a-zA-Z_][\w]*)/g, 'fn <span class="text-amber-300">$1</span>');
-
-    return out;
-  };
-
-  const html =
-    language === "rust" ? highlightRust(code) : escape(code);
-
   return (
-    <pre className="rounded-md bg-[#071226] p-4 overflow-auto text-sm leading-relaxed">
-      <code
-        className={`language-${language}`}
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-    </pre>
+    <div
+      className="text-sm overflow-auto [&>pre]:p-4 [&>pre]:leading-relaxed [&>pre]:!font-mono"
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
   );
 };
 
