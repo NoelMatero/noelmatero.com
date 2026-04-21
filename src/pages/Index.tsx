@@ -137,7 +137,7 @@ fn main() {
               </div>
 
             </div>
-            <div className="border-t border-[hsl(var(--grid-line))] bg-background flex justify-end px-6 py-3">
+            <div className="border-t border-[hsl(var(--grid-line))] bg-background flex justify-center px-6 py-3">
               <a href="https://github.com/NoelMatero/" target="_blank" className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors">
                 <span className="text-accent/60">→</span>view rest on github.com/NoelMatero
               </a>
