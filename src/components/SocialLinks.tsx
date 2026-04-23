@@ -11,6 +11,8 @@ const SocialLinks = () => {
       </a>
       <a
         href="https://www.linkedin.com/in/matero-noel-70b414390"
+        target="_blank"
+        rel="noopener noreferrer"
         className="font-mono text-sm text-muted-foreground hover:text-foreground/80 transition-colors"
       >
         LinkedIn

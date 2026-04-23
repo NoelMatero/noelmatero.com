@@ -28,8 +28,8 @@ const Index = () => {
                 </a>
               </div>
               <div className="flex items-center justify-center">
-                <a href="mailto:noel@noelmatero.com" className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors">
-                  <span className="text-accent/60">→</span>noel@noelmatero.com
+                <a href="https://www.linkedin.com/in/matero-noel-70b414390" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors">
+                  <span className="text-accent/60">→</span>LinkedIn
                 </a>
               </div>
               <div className="flex items-center justify-center">
