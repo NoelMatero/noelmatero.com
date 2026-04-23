@@ -10,7 +10,7 @@ const SocialLinks = () => {
         GitHub
       </a>
       <a
-        href="https://www.linkedin.com/in/matero-noel-70b414390"
+        href="#"
         className="font-mono text-sm text-muted-foreground hover:text-foreground/80 transition-colors"
       >
         LinkedIn

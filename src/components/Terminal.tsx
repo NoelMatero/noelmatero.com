@@ -1,6 +1,7 @@
 const Terminal = () => {
   return (
-    <div className="w-full border border-[hsl(var(--grid-line))] hover-border bg-background min-h-[400px]">      {/* Terminal header */}
+    <div className="w-full border border-[hsl(var(--grid-line))] hover-border bg-background">
+      {/* Terminal header */}
       <div className="flex items-center gap-2 px-4 py-3 border-b border-[hsl(var(--grid-line))]">
         <div className="flex gap-1.5">
           <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
@@ -17,7 +18,7 @@ const Terminal = () => {
           <span className="text-foreground">whoami</span>
         </div>
         <div className="pl-4 text-muted-foreground">
-          An 18-year-old builder 
+          An 18-year-old who loves building
         </div>
         
         <div className="flex items-start gap-2 pt-2">
