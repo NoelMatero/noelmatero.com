@@ -39,10 +39,9 @@ const COLORS = [
 
 export default function Screensaver() {
   const [active, setActive] = useState(false);
-  const [pos, setPos] = useState({ x: 0, y: 0 });
-  const [color, setColor] = useState("#ffffff");
 
   const posRef = useRef({ x: 200, y: 150, dx: SPEED, dy: SPEED * 0.85 });
+  const colorRef = useRef(COLORS[0]);
   const rafRef = useRef<number>();
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
   const nmRef = useRef<HTMLDivElement>(null);
@@ -65,15 +64,18 @@ export default function Screensaver() {
     };
   }, []);
 
-  // Bounce animation
+  // Bounce animation — position and color written directly to DOM, zero React re-renders per frame
   useEffect(() => {
     if (!active) {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
       return;
     }
 
-    const w = nmRef.current?.offsetWidth ?? 190;
-    const h = nmRef.current?.offsetHeight ?? 110;
+    const el = nmRef.current;
+    if (!el) return;
+
+    const w = el.offsetWidth || 190;
+    const h = el.offsetHeight || 110;
     posRef.current = {
       x: Math.random() * (window.innerWidth - w),
       y: Math.random() * (window.innerHeight - h),
@@ -83,8 +85,8 @@ export default function Screensaver() {
 
     const animate = () => {
       const p = posRef.current;
-      const elemW = nmRef.current?.offsetWidth ?? 190;
-      const elemH = nmRef.current?.offsetHeight ?? 110;
+      const elemW = el.offsetWidth || 190;
+      const elemH = el.offsetHeight || 110;
       const vw = window.innerWidth;
       const vh = window.innerHeight;
 
@@ -92,35 +94,18 @@ export default function Screensaver() {
       p.y += p.dy;
 
       let bounced = false;
-      if (p.x <= 0) {
-        p.x = 0;
-        p.dx = Math.abs(p.dx);
-        bounced = true;
-      }
-      if (p.x + elemW >= vw) {
-        p.x = vw - elemW;
-        p.dx = -Math.abs(p.dx);
-        bounced = true;
-      }
-      if (p.y <= 0) {
-        p.y = 0;
-        p.dy = Math.abs(p.dy);
-        bounced = true;
-      }
-      if (p.y + elemH >= vh) {
-        p.y = vh - elemH;
-        p.dy = -Math.abs(p.dy);
-        bounced = true;
-      }
+      if (p.x <= 0)           { p.x = 0;          p.dx =  Math.abs(p.dx); bounced = true; }
+      if (p.x + elemW >= vw)  { p.x = vw - elemW; p.dx = -Math.abs(p.dx); bounced = true; }
+      if (p.y <= 0)           { p.y = 0;          p.dy =  Math.abs(p.dy); bounced = true; }
+      if (p.y + elemH >= vh)  { p.y = vh - elemH; p.dy = -Math.abs(p.dy); bounced = true; }
 
       if (bounced) {
-        setColor((prev) => {
-          const opts = COLORS.filter((c) => c !== prev);
-          return opts[Math.floor(Math.random() * opts.length)];
-        });
+        const opts = COLORS.filter((c) => c !== colorRef.current);
+        colorRef.current = opts[Math.floor(Math.random() * opts.length)];
+        el.style.color = colorRef.current;
       }
 
-      setPos({ x: p.x, y: p.y });
+      el.style.transform = `translate3d(${p.x}px, ${p.y}px, 0)`;
       rafRef.current = requestAnimationFrame(animate);
     };
 
@@ -138,15 +123,16 @@ export default function Screensaver() {
         ref={nmRef}
         style={{
           position: "absolute",
-          left: pos.x,
-          top: pos.y,
+          top: 0,
+          left: 0,
           fontSize: "7rem",
           fontWeight: 600,
-          color,
+          color: colorRef.current,
           fontFamily: "var(--font-mono)",
           letterSpacing: "-0.04em",
           lineHeight: 1,
           userSelect: "none",
+          willChange: "transform",
         }}
       >
         NM
