@@ -1,5 +1,6 @@
 import GridBackground from "@/components/GridBackground";
 import CodeBlock from "@/components/CodeBlock";
+import Screensaver from "@/components/Screensaver";
 
 const achievements = [
   "An 18-year-old builder.",
@@ -14,6 +15,7 @@ const achievements = [
 const Index = () => {
   return (
     <main className="min-h-screen bg-background text-foreground font-mono">
+      <Screensaver />
       <GridBackground />
 
       <div className="relative z-10">
