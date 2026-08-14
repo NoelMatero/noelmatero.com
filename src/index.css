@@ -39,6 +39,7 @@
     /* Custom tokens */
     --font-mono: 'Geist Mono', 'JetBrains Mono', monospace;
     --font-sans: 'Inter', system-ui, sans-serif;
+    --font-bare: Times, 'Times New Roman', 'Liberation Serif', serif;
     
     /* Accent glow - subtle */
     --glow-accent: 0 0 20px hsl(142 70% 45% / 0.15);
@@ -72,6 +73,12 @@
 @layer utilities {
   .font-mono {
     font-family: var(--font-mono);
+  }
+
+  /* Unstyled-document serif — the browser's own default body face. Used for
+     human prose only; names, labels and code stay mono. */
+  .font-bare {
+    font-family: var(--font-bare);
   }
 
   .grid-line {
