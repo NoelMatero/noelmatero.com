@@ -65,7 +65,7 @@ const Index = () => {
               <div className="mt-7 flex justify-center">
                 <a
                   href="mailto:noel@noelmatero.com"
-                  className="font-bare border border-[hsl(var(--grid-line))] px-6 py-2.5 text-[15px] text-muted-foreground hover:text-foreground hover:border-[hsl(var(--accent))] transition-colors"
+                  className="font-bare border border-[hsl(var(--grid-line))] px-6 py-2.5 text-[15px] text-muted-foreground hover:text-foreground hover:border-[hsl(var(--foreground))] transition-colors"
                 >
                   Get in touch
                 </a>
