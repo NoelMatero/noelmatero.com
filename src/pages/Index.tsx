@@ -11,7 +11,7 @@ const BioLink = ({
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="text-foreground underline decoration-[hsl(var(--grid-line))] underline-offset-[3px] hover:text-accent hover:decoration-accent transition-colors"
+    className="text-foreground underline decoration-[hsl(var(--grid-line))] underline-offset-[3px] hover:decoration-foreground transition-colors"
   >
     {children}
   </a>
@@ -62,12 +62,28 @@ const Index = () => {
               </p>
 
               {/* Square corners and grid-line border, serif to match the prose */}
-              <div className="mt-7 flex justify-center">
+              <div className="mt-7 flex justify-center gap-3">
+                <a
+                  href="https://www.linkedin.com/in/matero-noel-70b414390"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bare border border-[hsl(var(--grid-line))] px-6 py-2.5 text-[15px] text-muted-foreground hover:text-foreground hover:border-[hsl(var(--foreground))] transition-colors"
+                >
+                  LinkedIn
+                </a>
                 <a
                   href="mailto:noel@noelmatero.com"
                   className="font-bare border border-[hsl(var(--grid-line))] px-6 py-2.5 text-[15px] text-muted-foreground hover:text-foreground hover:border-[hsl(var(--foreground))] transition-colors"
                 >
                   Get in touch
+                </a>
+                <a
+                  href="https://github.com/NoelMatero/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bare border border-[hsl(var(--grid-line))] px-6 py-2.5 text-[15px] text-muted-foreground hover:text-foreground hover:border-[hsl(var(--foreground))] transition-colors"
+                >
+                  GitHub
                 </a>
               </div>
             </div>
