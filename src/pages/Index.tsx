@@ -8,11 +8,17 @@ function highlightRust(src: string) {
   return src
     .split("\n")
     .map((line) => {
-      const escaped = line.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      const escaped = line
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
       if (/^\s*\/\//.test(line)) {
         return `<span class="text-muted-foreground">${escaped}</span>`;
       }
-      return escaped.replace(RUST_KEYWORDS, '<span class="text-accent">$1</span>');
+      return escaped.replace(
+        RUST_KEYWORDS,
+        '<span class="text-accent">$1</span>',
+      );
     })
     .join("\n");
 }
@@ -162,8 +168,8 @@ const Index = () => {
               }
             >
               The cube itself, from the robot build at 14. The black and blue
-              squares drawn with a marker were drawn so that the robot's
-              camera could detect them better.
+              squares drawn with a marker were drawn so that the robot's camera
+              could detect them better.
             </ProjectBox>
 
             <ProjectBox
@@ -179,8 +185,8 @@ const Index = () => {
               <BioLink href="https://github.com/NoelMatero/DemoSmartWatch">
                 my smartwatch
               </BioLink>{" "}
-              I built at 15. Red is the copper layer, blue is the copper
-              layer of the other side of the board.
+              I built at 15. Red is the copper layer, blue is the copper layer
+              of the other side of the board.
             </ProjectBox>
 
             <ProjectBox
@@ -198,7 +204,6 @@ const Index = () => {
               <BioLink href="https://github.com/NoelMatero/orangutan">
                 Orangutan
               </BioLink>{" "}
-              for sending data from the Client to the Orangutan instance.
             </ProjectBox>
           </div>
         </section>
