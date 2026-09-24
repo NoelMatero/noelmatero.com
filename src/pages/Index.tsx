@@ -97,34 +97,39 @@ const Index = () => {
           <div className="mx-6 border border-[hsl(var(--grid-line))]">
             <div className="bg-background px-6 py-8">
               <p className="font-bare max-w-2xl mx-auto text-[17px] leading-[1.65] text-muted-foreground">
-                I started tech (electronics, programming and physics) at 14 and
-                decided to build a robot that could solve the rubics cube with
-                python and LEGOs. I built{" "}
+                I got into electronics, programming and physics at 14, and my
+                first project was a Python and LEGO robot built to solve a
+                Rubik's cube. Partially failed but at least I learned how to
+                express my thoughts to a computer. At 15 I designed{" "}
                 <BioLink href="https://github.com/NoelMatero/DemoSmartWatch">
                   my own smartwatch
-                </BioLink>{" "}
-                at 15 (the PCB had a couple of issues, so it didn't work). I
-                built{" "}
+                </BioLink>
+                , including the PCB, which was a failure (misrouted the RST pin
+                of a component, so it was stuck on reset, such a stupid
+                mistake). At 16 I wrote{" "}
                 <BioLink href="https://github.com/NoelMatero/orangutan">
                   my own async Rust web server library
                 </BioLink>{" "}
                 with{" "}
-                <BioLink href="https://github.com/tokio-rs/mio">MIO</BioLink>{" "}
-                (the lowest level of communication with the OS) at 16. At 17 I
-                joined{" "}
-                <BioLink href="https://mundane.company/">
-                  a startup in SF
+                <BioLink href="https://github.com/tokio-rs/mio">MIO </BioLink>
+                (the lowest-level networking library in Rust) At 17 I reached
+                the finals of the Finnish Olympiad in Informatics and placed
+                25th in{" "}
+                <BioLink href="https://first.global/fgc/">
+                  the world's largest robotics competition
                 </BioLink>{" "}
-                as a software engineer after getting to the finals of the
-                Finnish national olympiad in informatics and after getting 25th
-                in the world's largest robotics competition (I programmed the
-                robot). Shortly after turning 18, I won my first hackathon as a
-                solo, got to{" "}
-                <BioLink href="https://nullfellows.com">null fellows</BioLink>,
-                won another hackathon, graduated from high school and now I'm
+                (I programmed the robot). After that I joined{" "}
+                <BioLink href="https://mundane.company/">
+                  an SF-based AI startup
+                </BioLink>{" "}
+                as a software engineer, working remotely for a few months before
+                my final exams. Shortly after turning 18, I won my first
+                hackathon solo, got into{" "}
+                <BioLink href="https://nullfellows.com">Null Fellows</BioLink>,
+                won another hackathon and graduated from high school. Now I'm
                 looking for something ambitious, interesting and new. I love
-                systems, rust and hard challenges, not because of the difficulty
-                itself but because by nature they're usually fascinating.{" "}
+                systems, Rust and hard problems, not because they're difficult
+                but because they're usually fascinating.
               </p>
 
               {/* Square corners and grid-line border, serif to match the prose */}
